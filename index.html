@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>JavaScript Animation</h1>
+
+<div id ="myContainer">
+    <div id ="myAnimation">WoW!</div>
+</div>
+<p>
+        <button onclick="myMove()">Liikuta</button> 
+</p>
+<script>
+        function myMove() {
+          var elem = document.getElementById("myAnimation");   
+          var pos = 0;
+          var id = setInterval(frame, 10);
+          function frame() {
+            if (pos == 350) {
+              clearInterval(id);
+            } else {
+              pos++; 
+              elem.style.top = pos + 'px'; 
+              elem.style.left = pos + 'px'; 
+            }
+          }
+        }
+        </script>
+</body>
+<html>
